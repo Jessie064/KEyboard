@@ -1,0 +1,136 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #343536;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+}
+
+.word-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#wordInput, #typingInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+#wordInput:focus, #typingInput:focus {
+    outline: none;
+    border-color: #3182ce;
+}
+
+#addWordButton, #startButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+#addWordButton {
+    background-color: #48bb78;
+    color: #fff;
+}
+
+#addWordButton:hover {
+    background-color: #38a169;
+}
+
+#startButton {
+    background-color: #4299e1;
+    color: #fff;
+}
+
+#startButton:hover:not(:disabled) {
+    background-color: #3182ce;
+}
+
+#startButton:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#wordList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+#wordList li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#wordList li:last-child {
+    border-bottom: none;
+}
+
+.remove-word {
+    background: none;
+    border: none;
+    color: #e53e3e;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.word-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+}
+
+.typing-input {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.feedback-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.feedback-correct {
+    color: #48bb78;
+}
+
+.feedback-incorrect {
+    color: #e53e3e;
+}
